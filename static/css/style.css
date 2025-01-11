@@ -1,0 +1,126 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 100%; /* Membuat lebar container 100% */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+}
+
+h1 {
+    text-align: center;
+    color: #5a5a5a;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    table-layout: fixed; /* Mengatur lebar kolom tabel agar tidak melebihi lebar container */
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    overflow: hidden; /* Menghindari teks yang meluber ke luar sel */
+    text-overflow: ellipsis; /* Menambahkan elipsis jika teks terlalu panjang */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+/* Responsive design for small screens */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}

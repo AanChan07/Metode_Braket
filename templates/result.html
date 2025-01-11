@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root Finder - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Iterasi</h1>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        {% if results %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Iteration</th>
+                        <th>Xl</th>
+                        <th>Xu</th>
+                        <th>Xr</th>
+                        <th>F(Xl)</th>
+                        <th>F(Xu)</th>
+                        <th>F(Xr)</th>
+                        <th>F(Xl) * F(Xr)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in results %}
+                        <tr>
+                            <td>{{ row.iteration }}</td>
+                            <td>{{ row.Xl }}</td>
+                            <td>{{ row.Xu }}</td>
+                            <td>{{ row.Xr }}</td>
+                            <td>{{ row['F(Xl)'] }}</td>
+                            <td>{{ row['F(Xu)'] }}</td>
+                            <td>{{ row['F(Xr)'] }}</td>
+                            <td>{{ row['F(Xl)*F(Xr)'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+        
+        <a href="/">Kembali ke Halaman Input</a>
+    </div>
+</body>
+</html>

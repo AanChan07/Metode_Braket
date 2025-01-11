@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Root Finder Using Numerical Methods</h1>
+
+        <form action="/result" method="POST">
+            <label for="function">Masukkan Fungsi (contoh: 0.5x^2 - 1.5x + 1):</label>
+            <input type="text" name="function" required><br><br>
+            
+            <label for="method">Pilih Metode:</label>
+            <select name="method" required>
+                <option value="bisection">Bisection</option>
+                <option value="regula_falsi">Regula Falsi</option>
+            </select><br><br>
+
+            <label for="a">Nilai Xl:</label>
+            <input type="number" name="a" step="any" required><br><br>
+
+            <label for="b">Nilai Xu:</label>
+            <input type="number" name="b" step="any" required><br><br>
+            
+            <label for="iterations">Jumlah Iterasi:</label>
+            <input type="number" name="iterations" required><br><br>
+
+            <button type="submit">Hitung</button>
+        </form>
+    </div>
+</body>
+</html>
